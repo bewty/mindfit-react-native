@@ -20,6 +20,7 @@ export default class EntryList extends Component {
     };
 
     this.renderEntryList = this.renderEntryList.bind(this);
+    this.entryPress = this.entryPress.bind(this);
   }
 
   componentWillMount() {
@@ -42,9 +43,15 @@ export default class EntryList extends Component {
     return this.state.entries.map( (entry, index) => 
       <TouchableOpacity
         key={index} 
+        onPress={() => this.entryPress(entry)}
+      >
         <EntryTextDisplay entry={entry} />
       </TouchableOpacity>
     );
+  }
+
+  entryPress(entry) {
+    this.props.navigation.navigate('EntryDetail', entry);
   }
 
   render() {
