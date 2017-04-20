@@ -8,7 +8,8 @@ import {
   StyleSheet,
   View,
   Text,
-  ScrollView
+  ScrollView,
+  TouchableOpacity
 } from 'react-native';
 
 export default class EntryList extends Component {
@@ -20,6 +21,7 @@ export default class EntryList extends Component {
 
     this.renderEntryList = this.renderEntryList.bind(this);
   }
+
   componentWillMount() {
     const data = {
       user_id: '58f55a76393538d31aad168e'
@@ -38,7 +40,10 @@ export default class EntryList extends Component {
 
   renderEntryList() {
     return this.state.entries.map( (entry, index) => 
-      <EntryTextDisplay key={index} entry={entry}/>
+      <TouchableOpacity
+        key={index} 
+        <EntryTextDisplay entry={entry} />
+      </TouchableOpacity>
     );
   }
 
@@ -55,9 +60,10 @@ export default class EntryList extends Component {
 
 const styles = StyleSheet.create({
   entryListContainer: {
-    
+    flex: 1,
+    backgroundColor: '#fff',
   }, 
   text: {
-    color: 'black'
+    color: '#262626',
   }
 });
