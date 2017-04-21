@@ -4,7 +4,8 @@ import {
   Text,
   View,
   TextInput,
-  Button
+  Button,
+  TouchableOpacity
 } from 'react-native';
 
 export default class TextEntry extends Component {
@@ -18,6 +19,11 @@ export default class TextEntry extends Component {
             style={styles.textInput}
           />
         </View>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>
+            UPLOAD
+          </Text>
+        </TouchableOpacity>
       </View>
     )
   }
@@ -33,8 +39,26 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     padding: 10,
-    borderColor: 'gray', 
-    borderWidth: 1,
     fontSize: 16,
+  },
+  button: {
+    alignSelf: 'stretch',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    backgroundColor: '#EB5424',
+    height: 60,
+    borderRadius: 2,
+    borderWidth: 1,
+    borderColor: '#EB5424',
+    marginLeft: 5,
+    marginRight: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    alignSelf: 'center',
+    paddingTop: 10,
+    paddingBottom: 10,
+    fontSize: 18,
+    fontWeight: '600',
   }
 });

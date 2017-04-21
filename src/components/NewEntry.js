@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import TextEntry from './TextEntry';
+import NewEntryHeader from './NewEntryHeader';
+
 import {
   StyleSheet,
   Text,
@@ -12,6 +14,7 @@ export default class NewEntry extends Component {
   render() {
     return (
       <View style={styles.textEntryContainer}>
+        <NewEntryHeader />
         <TextEntry />
       </View>
     )
