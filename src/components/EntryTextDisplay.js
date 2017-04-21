@@ -13,11 +13,11 @@ import {
 const EntryTextDisplay = ({entry}) => {
     const renderIcon = (entryType) => {
       const icon = {
-        video: 'videocam', 
-        audio: 'keyboard-voice',
-        text: 'text-fields'
+        video: (<Icon name='videocam' size={24} color="#EB5424" />),
+        audio: (<Icon name='keyboard-voice' size={24} color="#EB5424" />),
+        text: (<Icon name='text-fields' size={24} color="#EB5424" />),
       }
-      return  <Icon name={icon[entryType]} size={24} color="#EB5424" />
+      return icon[entryType];
     }
 
     return (
