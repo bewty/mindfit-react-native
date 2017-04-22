@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Card from './Card';
 
 import {
   StyleSheet,
@@ -12,15 +13,15 @@ import {
 const EntryTextDisplay = ({entry}) => {
     const renderIcon = (entryType) => {
       const icon = {
-        video: (<Icon name="videocam" size={24} color="#EB5424" />),
-        audio: (<Icon name="keyboard-voice" size={24} color="#EB5424" />),
-        text: (<Icon name="text-fields" size={24} color="#EB5424" />)
+        video: 'videocam', 
+        audio: 'keyboard-voice',
+        text: 'text-fields'
       }
-      return icon[entryType];
+      return  <Icon name={icon[entryType]} size={24} color="#EB5424" />
     }
 
     return (
-      <View style={styles.card}>
+      <Card height={120}>
         <View style={styles.entryContainer}>
           <View style={styles.entryMeta}>
             <Text style={styles.date}>{entry.created_at.slice(0, 10)}</Text>
@@ -32,26 +33,16 @@ const EntryTextDisplay = ({entry}) => {
           ellipsizeMode={'tail'}
           >{entry.text}</Text>
         </View>
-      </View>
+      </Card>
     )
 }
 
 const styles = StyleSheet.create({
-  card: {
-    // backgroundColor: 'red',
-    height: 120,
-    marginBottom: 10,
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.1,
-  },
   entryContainer: {
     flex: 1,
-    marginRight: 14,
-    marginLeft: 14,
   },
   entryMeta: {
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
@@ -64,12 +55,13 @@ const styles = StyleSheet.create({
     color: '#82888a'
   },
   text: {
-    flex: 3,
+    flex: 5,
     justifyContent: 'center',
     alignItems: 'center',
     color: '#292929',
-    fontSize: 18,
-    marginTop: 10,
+    fontSize: 16,
+    lineHeight: 24,
+    marginTop: 6,
   }
 });
 

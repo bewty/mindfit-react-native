@@ -13,7 +13,6 @@ export default class Main extends Component {
   render() {
     return (
       <View>
-        <Header headerText={'Main'}/>
         <EntryList />
       </View>
     )
