@@ -13,6 +13,7 @@ const Card = ({children, height}) => {
     return {
     height: height,
     marginBottom: 10,
+    paddingBottom: 10,
     paddingLeft: 14,
     paddingRight: 14,
     shadowColor: '#000',
