@@ -5,13 +5,22 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
- const NewEntryHeader = ({headerText}) => {
+ const NewEntryHeader = ({headerText, activeType, currEntryType}) => {
+  const icon = {
+    Video: (<Icon name='videocam' size={24} color="#EB5424" />),
+    Audio: (<Icon name='keyboard-voice' size={24} color="#EB5424" />),
+    Text: (<Icon name='text-fields' size={24} color="#EB5424" />),    
+    VideoActive: (<Icon name='videocam' size={24} color="#929292" />),
+    AudioActive: (<Icon name='keyboard-voice' size={24} color="#929292" />),
+    TextActive: (<Icon name='text-fields' size={24} color="#929292" />),
+  }
   return (
     <View style={styles.headerContainer}>
-      <TouchableOpacity style={styles.topTabButton}><Text style={styles.headerText}>Video</Text></TouchableOpacity>
-      <TouchableOpacity style={styles.topTabButton}><Text style={styles.headerText}>Audio</Text></TouchableOpacity>
-      <TouchableOpacity style={styles.topTabButtonActiveTab}><Text style={styles.headerText}>Text</Text></TouchableOpacity>
+      <TouchableOpacity style={currEntryType === 'Text' ? styles.topTabButtonActiveTab : styles.topTabButton} onPress={() => activeType('Text')}>{currEntryType === 'Text' ? icon['Text'] : icon['TextActive']}</TouchableOpacity>
+      <TouchableOpacity style={currEntryType === 'Video' ? styles.topTabButtonActiveTab : styles.topTabButton} onPress={() => activeType('Video')}>{currEntryType === 'Video' ? icon['Video'] : icon['VideoActive']}</TouchableOpacity>
+      <TouchableOpacity style={currEntryType === 'Audio' ? styles.topTabButtonActiveTab : styles.topTabButton} onPress={() => activeType('Audio')}>{currEntryType === 'Audio' ? icon['Audio'] : icon['AudioActive']}</TouchableOpacity>
     </View>
   );
 };
@@ -22,7 +31,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     justifyContent: 'space-between', 
     alignItems: 'flex-end',
-    height: 60,
+    height: 80,
     paddingTop: 15,
     backgroundColor: '#fff',
     shadowColor: '#000',
@@ -43,12 +52,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     borderColor: '#fff',
     borderBottomColor: 'red',
-    borderWidth: 4,
+    borderWidth: 2,
   },
-  headerText: {
-    fontSize: 20,
-    color: '#262626',
-  }
 })
 
 export default NewEntryHeader;
