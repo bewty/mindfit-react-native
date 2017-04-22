@@ -14,12 +14,18 @@ export const EntryStack = StackNavigator({
     screen: EntryList,
     navigationOptions: {
       title: 'All Entries',
+      headerStyle: {
+          backgroundColor: '#fff'
+      }
     },
   },
   EntryDetail: {
     screen: EntryDetail,
     navigationOptions: ({navigation}) => ({
       title: `${navigation.state.params.created_at.slice(0, 10)}`,
+      headerStyle: {
+          backgroundColor: '#fff'
+      }
     }),
   },
 });
