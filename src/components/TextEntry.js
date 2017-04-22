@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -7,27 +9,28 @@ import {
   Button,
   TouchableOpacity
 } from 'react-native';
+import axios from 'axios';
 
-export default class TextEntry extends Component {
-  render() {
-    return (
-      <View style={styles.textEntryContainer}>
-        <View style={styles.textBox}>
-          <TextInput
-            placeholder="hello world"
-            multiline={true}
-            style={styles.textInput}
-          />
-        </View>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>
-            UPLOAD
-          </Text>
-        </TouchableOpacity>
+const TextEntry =({text, handleSubmit, textInputChange}) => {
+  return (
+    <View style={styles.textEntryContainer}>
+      <View style={styles.textBox}>
+        <TextInput
+          placeholder="How was your day today?"
+          multiline={true}
+          style={styles.textInput}
+          onChangeText={(text) => textInputChange({text})}
+        />
       </View>
-    )
-  }
+      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
+        <Text style={styles.buttonText} >
+          UPLOAD
+        </Text>
+      </TouchableOpacity>
+    </View>
+  )
 }
+
 
 const styles = StyleSheet.create({
   textEntryContainer: {
@@ -62,3 +65,5 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   }
 });
+
+export default TextEntry;

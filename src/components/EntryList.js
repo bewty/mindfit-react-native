@@ -97,6 +97,10 @@ class EntryList extends Component {
     this.fetchData();
   }
 
+  entrySelect(entry) {
+    this.props.navigation.navigate('EntryDetail', entry);
+  }
+  
   renderEntryList() {
     return this.props.entries.map( (entry, index) => 
       <TouchableOpacity
@@ -111,9 +115,6 @@ class EntryList extends Component {
     );
   }
 
-  entrySelect(entry) {
-    this.props.navigation.navigate('EntryDetail', entry);
-  }
 
   render() {
     return (
