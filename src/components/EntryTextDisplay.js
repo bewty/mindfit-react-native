@@ -13,15 +13,15 @@ import {
 const EntryTextDisplay = ({entry}) => {
     const renderIcon = (entryType) => {
       const icon = {
-        video: 'videocam', 
-        audio: 'keyboard-voice',
-        text: 'text-fields'
+        video: (<Icon name='videocam' size={24} color="#EB5424" />),
+        audio: (<Icon name='keyboard-voice' size={24} color="#EB5424" />),
+        text: (<Icon name='text-fields' size={24} color="#EB5424" />),
       }
-      return  <Icon name={icon[entryType]} size={24} color="#EB5424" />
+      return icon[entryType];
     }
 
     return (
-      <Card height={120}>
+      <Card height={130}>
         <View style={styles.entryContainer}>
           <View style={styles.entryMeta}>
             <Text style={styles.date}>{entry.created_at.slice(0, 10)}</Text>
@@ -29,7 +29,7 @@ const EntryTextDisplay = ({entry}) => {
           </View>
           <Text 
           style={styles.text} 
-          numberOfLines={2}
+          numberOfLines={3}
           ellipsizeMode={'tail'}
           >{entry.text}</Text>
         </View>
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
   },
   date: {
     fontSize: 14,
-    // fontWeight: 'bold',
+    fontWeight: 'bold',
     marginRight: 10,
     color: '#82888a'
   },
@@ -58,9 +58,9 @@ const styles = StyleSheet.create({
     flex: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    color: '#292929',
-    fontSize: 16,
-    lineHeight: 24,
+    color: '#303030',
+    fontSize: 15,
+    lineHeight: 20,
     marginTop: 6,
   }
 });

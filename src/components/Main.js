@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TextEntry from './TextEntry.js';
-import Header from './Header.js';
 import EntryList from './EntryList.js';
 
 import {

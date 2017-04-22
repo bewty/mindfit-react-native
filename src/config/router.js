@@ -14,24 +14,33 @@ export const EntryStack = StackNavigator({
     screen: EntryList,
     navigationOptions: {
       title: 'All Entries',
+      headerStyle: {
+          backgroundColor: '#fff'
+      }
     },
   },
   EntryDetail: {
     screen: EntryDetail,
     navigationOptions: ({navigation}) => ({
       title: `${navigation.state.params.created_at.slice(0, 10)}`,
+      headerStyle: {
+          backgroundColor: '#fff'
+      }
     }),
   },
 });
 
-export const NewEntryStack = StackNavigator({
-   NewEntry: {
-    screen:  NewEntry,
-    navigationOptions: {
-      title: ' New Entry',
-    },
-  },
-});
+// export const NewEntryStack = StackNavigator({
+//    NewEntry: {
+//     screen:  NewEntry,
+//     navigationOptions: {
+//       title: ' New Entry',
+//       headerLeft: <Button title='close'></Button>,
+//       headerRight: <Button title='next'></Button>,
+//       headerStyle: {backgroundColor: '#fff'},
+//     },
+//   },
+// });
 
 export const Tabs = TabNavigator({
   EntryList: {
@@ -53,7 +62,7 @@ export const Tabs = TabNavigator({
     },
   },  
   NewEntry: {
-    screen: NewEntryStack,
+    screen: NewEntry,
     navigationOptions: {
       tabBarLabel: 'New Entry',
       tabBarIcon: ({ tintColor }) => (
