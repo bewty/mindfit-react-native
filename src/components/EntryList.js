@@ -37,25 +37,6 @@ class EntryList extends Component {
     };
 
    this.fetchData();
-
-    // fetch('https://bewty.herokuapp.com/db/retrieveEntry', {
-    //   method: "POST",
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(data)
-    // })
-    // .then( response => {
-    //   return response.json();
-    // })
-    // .then( result => {
-    //   // console.log('result', result);
-    //   this.setState({
-    //     entries: result
-    //   });
-    // })
-    // .catch( err => console.error('Fetching Entry Error', err.message));
-
   }
 
   fetchData() {
@@ -100,7 +81,7 @@ class EntryList extends Component {
   entrySelect(entry) {
     this.props.navigation.navigate('EntryDetail', entry);
   }
-  
+
   renderEntryList() {
     return this.props.entries.map( (entry, index) => 
       <TouchableOpacity
@@ -115,7 +96,6 @@ class EntryList extends Component {
     );
   }
 
-
   render() {
     return (
       <ScrollView 
@@ -126,10 +106,8 @@ class EntryList extends Component {
             onRefresh={this._onRefresh}
           />
         }
-        >
-        <View>
-          {this.renderEntryList()}
-        </View>
+      >
+        <View> {this.renderEntryList()} </View>
       </ScrollView>
     );
   }
