@@ -21,7 +21,7 @@ class EntryList extends Component {
     super(props);
     this.state = {
       refreshing: false,
-      entries: [{'watson_results': '', 'text': '', 'entry_type': '', '_id': '', 'tags': [ ], 'audio': {'key': null, 'bucket': null}, 'video': {'avg_data': null, 'key': null, 'bucket': null, 'raw_data': null}, 'created_at': ''}]
+      entries: [{'watson_results': '', 'text': '', 'entry_type': '', '_id': '', 'tags': [ ], 'audio': {'key': null, 'bucket': null}, 'video': {'avg_data': null, 'key': null, 'bucket': null, 'raw_data': null}, 'created_at': ''}],
     };
 
     this.renderEntryList = this.renderEntryList.bind(this);
@@ -32,26 +32,17 @@ class EntryList extends Component {
   }
 
   componentWillMount() {
-    const data = {
-      user_id: '58fa54a39011a00012a54936'
-    };
-
    this.fetchData();
   }
 
   fetchData() {
     const data = {
-      user_id: '58fa54a39011a00012a54936'
+      user_id: '58fa54a39011a00012a54936' //hardcoded
     };
     
     axios.post('https://bewty.herokuapp.com/db/retrieveEntry', data)
     .then( response => {
-      // this.props.fetchEntry(result.data);
-      console.log('fetchEntry data:', response.data);
       this.props.fetchEntry(response.data);
-      // this.setState({
-      //   entries: response.data 
-      // });
     })
     .then(() => {
       this.setState({refreshing: false});
@@ -107,7 +98,9 @@ class EntryList extends Component {
           />
         }
       >
-        <View> {this.renderEntryList()} </View>
+        <View> 
+          {this.renderEntryList()} 
+        </View>
       </ScrollView>
     );
   }
