@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {Tabs} from './src/config/router.js';
-import Main from './src/components/Main.js';
+import App from './src/containers/App';
 
 import {
   AppRegistry,
@@ -13,7 +12,7 @@ export default class MindFit extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Tabs />
+        <App />
       </View>
     );
   }
