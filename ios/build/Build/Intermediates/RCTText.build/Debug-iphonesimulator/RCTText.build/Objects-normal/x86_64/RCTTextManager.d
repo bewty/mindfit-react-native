@@ -1,0 +1,32 @@
+dependencies: \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/node_modules/react-native/Libraries/Text/RCTTextManager.m \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/node_modules/react-native/Libraries/Text/RCTTextManager.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/UIView+React.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTComponent.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAccessibilityManager.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTShadowView.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/node_modules/react-native/Libraries/Text/RCTTextView.h \
+  /Users/Whitney/Desktop/HR/Thesis/react-native/MindFit/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTView.h
